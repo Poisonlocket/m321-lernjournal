@@ -6,17 +6,20 @@ In diesen Unterrichtsblöcken ging es um die Grundlagen der Authentisierung und 
 
 ## Lernerfolge
 
-Ich habe ein fundiertes Verständnis der Unterschiede zwischen **Authentisierung** (Identitätsbehauptung) und **Authentifizierung** (Identitätsprüfung) gewonnen. Besonders spannend war die Unterscheidung der Authentifizierungsarten: Wissen (z.B. Passwort), Besitz (z.B. SMS-Code) und Sein (z.B. Fingerabdruck).
+Ich habe ein fundiertes Verständnis der Unterschiede zwischen **Authentisierung** (Identitätsbehauptung) und **Authentifizierung** (Identitätsprüfung). Besonders spannend war die Unterscheidung der Authentifizierungsarten: z.B. Passwort, SMS-Code und Fingerabdruck.
 
 Die Einführung von **Mehr-Faktor-Authentifizierung** sowie Technologien wie **FIDO2** zeigen, wie wichtig es ist, die Benutzeridentität auf mehrere Arten zu überprüfen – vor allem im Kontext von Webdiensten mit sensiblen Daten.
 
-Ein besonderes Aha-Erlebnis hatte ich beim Thema **JWT**: Endlich habe ich wirklich verstanden, wie ein stateless Authentifizierungsmechanismus funktioniert. Dass ein Token nach erfolgreichem Login erstellt, signiert und verschlüsselt wird, und dann bei jedem weiteren Request mitgeschickt wird, ist ein extrem eleganter Ansatz.
+---
+![Passkey auth](./img/passkey_auth.png)
+---
+
+Ein besonderes Aha-Erlebnis hatte ich beim Thema **JWT**: Endlich habe ich wirklich verstanden, wie ein stateless Authentifizierungsmechanismus funktioniert. Dass ein Token nach erfolgreichem Login erstellt, signiert und verschlüsselt wird, und dann bei jedem weiteren Request mitgeschickt wird, ist ein simpler aber effizienter Weg die Authentifizierung zu lösen.
 
 ## Reflexion
 
-Ich finde es sehr sinnvoll, dass wir in unserer IDPA-Vorabschlussarbeit *Sproutly* genau diese Techniken einsetzen: Wir nutzen JWT und speichern das Token im `sessionStorage`. Das war am Anfang etwas verwirrend, aber durch das Unterrichtsmaterial habe ich das Konzept nun wirklich durchschaut.
+Ich finde es sehr sinnvoll, dass wir in unserer IDPA-Vorabschlussarbeit *Sproutly* genau diese Techniken einsetzen: Wir nutzen JWT und speichern das Token im `sessionStorage`. Das war am Anfang etwas verwirrend, aber durch das Unterrichtsmaterial konnten wir die Konzepte in unsere Applikation erfolgreich einbauen.
 
-Etwas irritierend finde ich allerdings, dass trotz Single Sign-On mit Azure AD am BZZ manchmal mehrere Logins notwendig sind. Ich benutze privat den Brave-Browser, was möglicherweise auch eine Rolle spielt. Aber ich verstehe jetzt: SSO gilt jeweils nur innerhalb der gleichen Umgebung, also z.B. nur im selben Browser.
 
 ## Glossar (in eigenen Worten)
 
@@ -28,3 +31,4 @@ Etwas irritierend finde ich allerdings, dass trotz Single Sign-On mit Azure AD a
 - **Mehr-Faktor-Authentifizierung (MFA)**: Ich muss mehrere Dinge beweisen, z.B. Passwort + Code auf dem Handy.
 - **FIDO2**: Ein Authentifizierungsverfahren ohne Passwort, das z.B. auf Hardware-Token basiert.
 - **Single Sign-On (SSO)**: Einmal anmelden, mehrfach nutzen – aber nur innerhalb eines bestimmten Kontexts (z.B. derselbe Browser).
+
